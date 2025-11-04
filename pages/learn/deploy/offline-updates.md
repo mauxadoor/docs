@@ -173,7 +173,7 @@ $ balena deploy ${fleet_slug} --build --emulated --source .
 The following steps will flash the latest release onto the balenaOS image downloaded in the previous steps and pin the device to mentioned release commit.
 
 ```bash
-$ commit=$(balena fleet ${fleet_slug} | grep Commit | awk '{print $3}')
+$ commit=$(balena fleet ${fleet_slug} | grep COMMIT | awk '{print $2}')
 
 $ balena preload ${tmpimg} \
     --fleet ${fleet_slug} \
