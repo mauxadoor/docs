@@ -93,7 +93,7 @@ $ balena fleet create ${fleet_name} --type ${device_type}
 Initialize the `fleet_slug` environment variable with the command below to store the slug of the fleet.
 
 ```bash
-$ fleet_slug=$(balena fleet ${fleet_name} | grep Slug | awk '{print $3}')
+$ fleet_slug=$(balena fleet ${fleet_name} | grep SLUG | awk '{print $2}')
 ```
 
 ### Create/Use Pre-existing Offline Device
